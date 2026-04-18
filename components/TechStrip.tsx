@@ -5,6 +5,7 @@ const techs = [
 	"Tailwind CSS",
 	"Shadcn UI",
 	"Node.js",
+	"ERPNext",
 	"PostgreSQL",
 	"Prisma ORM",
 	"REST API",

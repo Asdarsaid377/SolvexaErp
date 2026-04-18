@@ -54,14 +54,14 @@ const projects = [
 		n: "08",
 		title: "ERP Proyek Sekolah Rakyat — Kab. Bone",
 		sub: "PT Nindya & BPS KSO — Proyek Pembangunan Strategis Nasional",
-		chip: "ERP Proyek",
+		chip: "ERP",
 		chipClass: "chip-erp",
 	},
 	{
 		n: "09",
 		title: "ERP Proyek Sekolah Rakyat — Tebing Tinggi",
 		sub: "PT Waskita & MKI KSO — Proyek Pembangunan Sekolah Rakyat Palembang",
-		chip: "ERP Proyek",
+		chip: "ERP",
 		chipClass: "chip-erp",
 	},
 ];
