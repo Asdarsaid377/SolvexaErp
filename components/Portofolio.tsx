@@ -103,76 +103,71 @@ export default function PortfolioSection() {
 			id="portfolio"
 			className="px-6 md:px-16 py-[30px] md:py-[110px]"
 			style={{ background: "var(--bg-base)" }}>
-			<ScrollReveal className="mb-14">
-				<div
-					className="inline-flex items-center gap-[10px] text-[.72rem] font-semibold tracking-[2px] uppercase mb-3"
-					style={{ color: "var(--orange-600)" }}>
-					<span
-						className="w-5 h-[2px]"
-						style={{ background: "var(--orange-400)" }}
-					/>
-					Klien &amp; Portofolio
-				</div>
-				<h2
-					className="leading-[1.1] tracking-[-0.5px]"
-					style={{
-						fontFamily: "var(--font-playfair)",
-						fontSize: "clamp(1.9rem,3.5vw,2.8rem)",
-						fontWeight: 900,
-						color: "var(--text-primary)",
-					}}>
-					Dipercaya oleh Perusahaan
-					<br />
-					&amp; Institusi Terkemuka
-				</h2>
-			</ScrollReveal>
-
-			<ScrollReveal delay={1}>
-				<div
-					className="flex flex-col border rounded-[var(--radius)] overflow-hidden"
-					style={{ borderColor: "var(--border-soft)" }}>
-					{projects.map((item, index) => (
+			<div
+				className="inline-flex items-center gap-[10px] text-[.72rem] font-semibold tracking-[2px] uppercase mb-3"
+				style={{ color: "var(--orange-600)" }}>
+				<span
+					className="w-5 h-[2px]"
+					style={{ background: "var(--orange-400)" }}
+				/>
+				Klien &amp; Portofolio
+			</div>
+			<h2
+				className="leading-[1.1] tracking-[-0.5px]"
+				style={{
+					fontFamily: "var(--font-playfair)",
+					fontSize: "clamp(1.9rem,3.5vw,2.8rem)",
+					fontWeight: 900,
+					color: "var(--text-primary)",
+				}}>
+				Dipercaya oleh Perusahaan
+				<br />
+				&amp; Institusi Terkemuka
+			</h2>
+			<div
+				className="flex flex-col border rounded-[var(--radius)] overflow-hidden"
+				style={{ borderColor: "var(--border-soft)" }}>
+				{projects.map((item, index) => (
+					<div
+						key={index}
+						className="port-item relative grid items-center gap-7 px-9 py-[26px] border-b last:border-b-0"
+						style={{
+							gridTemplateColumns: "52px 1fr auto",
+							background: "var(--bg-card)",
+							borderColor: "var(--border-soft)",
+						}}
+						data-cursor-hover>
 						<div
-							key={index}
-							className="port-item relative grid items-center gap-7 px-9 py-[26px] border-b last:border-b-0"
+							className="text-[.85rem] font-bold"
 							style={{
-								gridTemplateColumns: "52px 1fr auto",
-								background: "var(--bg-card)",
-								borderColor: "var(--border-soft)",
-							}}
-							data-cursor-hover>
-							<div
-								className="text-[.85rem] font-bold"
+								fontFamily: "var(--font-playfair)",
+								color: "var(--orange-400)",
+							}}>
+							{index + 1}
+						</div>
+						<div>
+							<h3
+								className="port-title text-[.98rem] font-bold mb-[3px] transition-colors duration-250"
 								style={{
 									fontFamily: "var(--font-playfair)",
-									color: "var(--orange-400)",
+									color: "var(--text-primary)",
 								}}>
-								{index + 1}
-							</div>
-							<div>
-								<h3
-									className="port-title text-[.98rem] font-bold mb-[3px] transition-colors duration-250"
-									style={{
-										fontFamily: "var(--font-playfair)",
-										color: "var(--text-primary)",
-									}}>
-									{item.title}
-								</h3>
-								<p
-									className="text-[.8rem] font-light"
-									style={{ color: "var(--text-muted)" }}>
-									{item.sub}
-								</p>
-							</div>
-							<span
-								className="hidden sm:inline-block px-[14px] py-[4px] rounded-full text-[.7rem] font-semibold tracking-[.5px] whitespace-nowrap"
-								style={chipStyles[item.chipClass]}>
-								{item.chip}
-							</span>
+								{item.title}
+							</h3>
+							<p
+								className="text-[.8rem] font-light"
+								style={{ color: "var(--text-muted)" }}>
+								{item.sub}
+							</p>
 						</div>
-					))}
-				</div>
-			</ScrollReveal>
+						<span
+							className="hidden sm:inline-block px-[14px] py-[4px] rounded-full text-[.7rem] font-semibold tracking-[.5px] whitespace-nowrap"
+							style={chipStyles[item.chipClass]}>
+							{item.chip}
+						</span>
+					</div>
+				))}
+			</div>
 		</section>
 	);
 }

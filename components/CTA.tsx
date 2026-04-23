@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ScrollReveal from "./ScrollReveal";
 
 const contacts = [
 	{ icon: "📧", title: "Email", value: "info@asdarsaid.dev" },
@@ -26,7 +25,7 @@ export function CTASection() {
 			/>
 
 			<div className="relative z-10">
-				<ScrollReveal>
+				<div>
 					<div
 						className="inline-flex items-center justify-center gap-[10px] text-[.72rem] font-semibold tracking-[2px] uppercase mb-3"
 						style={{ color: "var(--orange-600)" }}>
@@ -53,64 +52,60 @@ export function CTASection() {
 						style={{ color: "var(--text-secondary)" }}>
 						Ceritakan kebutuhan Anda. Konsultasi gratis, tanpa komitmen apapun.
 					</p>
-				</ScrollReveal>
+				</div>
 
 				{/* Contact cards */}
-				<ScrollReveal delay={2}>
-					<div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[840px] mx-auto mb-16">
-						{contacts.map(({ icon, title, value }) => (
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[840px] mx-auto mb-16">
+					{contacts.map(({ icon, title, value }) => (
+						<div
+							key={title}
+							className="cta-info-card text-left p-6 rounded-[var(--radius)] border transition-all duration-300"
+							style={{
+								background: "var(--bg-card)",
+								borderColor: "var(--border-soft)",
+							}}
+							data-cursor-hover>
+							<span className="text-2xl mb-3 block">{icon}</span>
 							<div
-								key={title}
-								className="cta-info-card text-left p-6 rounded-[var(--radius)] border transition-all duration-300"
+								className="text-[.9rem] font-bold mb-[6px]"
 								style={{
-									background: "var(--bg-card)",
-									borderColor: "var(--border-soft)",
-								}}
-								data-cursor-hover>
-								<span className="text-2xl mb-3 block">{icon}</span>
-								<div
-									className="text-[.9rem] font-bold mb-[6px]"
-									style={{
-										fontFamily: "var(--font-playfair)",
-										color: "var(--text-primary)",
-									}}>
-									{title}
-								</div>
-								<div
-									className="text-[.82rem] font-medium break-all"
-									style={{ color: "var(--orange-600)" }}>
-									{value}
-								</div>
+									fontFamily: "var(--font-playfair)",
+									color: "var(--text-primary)",
+								}}>
+								{title}
 							</div>
-						))}
-					</div>
-				</ScrollReveal>
+							<div
+								className="text-[.82rem] font-medium break-all"
+								style={{ color: "var(--orange-600)" }}>
+								{value}
+							</div>
+						</div>
+					))}
+				</div>
 
-				<ScrollReveal delay={3}>
-					<div className="flex gap-4 justify-center flex-wrap">
-						<Link
-							href="mailto:info@asdarsaid.dev"
-							className="inline-block px-8 py-[14px] rounded-full text-[.92rem] font-semibold no-underline transition-all duration-300"
-							style={{
-								background: "var(--orange-400)",
-								color: "var(--text-on-orange)",
-								boxShadow: "0 6px 20px rgba(244,131,42,.35)",
-								border: "2px solid var(--orange-400)",
-							}}>
-							📧 Kirim Email
-						</Link>
-						<Link
-							href="https://wa.me/+6289630085814"
-							className="inline-block px-8 py-[14px] rounded-full text-[.92rem] font-semibold no-underline transition-all duration-300"
-							style={{
-								background: "transparent",
-								color: "var(--orange-600)",
-								border: "2px solid var(--border-medium)",
-							}}>
-							💬 Chat WhatsApp
-						</Link>
-					</div>
-				</ScrollReveal>
+				<div className="flex gap-4 justify-center flex-wrap">
+					<Link
+						href="mailto:info@asdarsaid.dev"
+						className="inline-block px-8 py-[14px] rounded-full text-[.92rem] font-semibold no-underline transition-all duration-300"
+						style={{
+							background: "var(--orange-400)",
+							color: "var(--text-on-orange)",
+							boxShadow: "0 6px 20px rgba(244,131,42,.35)",
+							border: "2px solid var(--orange-400)",
+						}}>
+						📧 Kirim Email
+					</Link>
+					<Link
+						href="https://wa.me/+6289630085814"
+						className="inline-block px-8 py-[14px] rounded-full text-[.92rem] font-semibold no-underline transition-all duration-300"
+						style={{
+							background: "transparent",
+							color: "var(--orange-600)",
+							border: "2px solid var(--border-medium)",
+						}}>
+						💬 Chat WhatsApp
+					</Link>
+				</div>
 			</div>
 		</section>
 	);
