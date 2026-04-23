@@ -26,11 +26,9 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html
-			lang="id"
-			className={`${playfair.variable} ${plusJakarta.variable} h-full antialiased`}>
-			<body className="min-h-full flex flex-col">
-				<CustomCursor />
+		<html lang="id" className={`${playfair.variable} ${plusJakarta.variable}`}>
+			<body>
+				{/* <CustomCursor /> */}
 				{children}
 			</body>
 		</html>

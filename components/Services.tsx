@@ -15,8 +15,8 @@ const services = [
 	},
 	{
 		icon: "🖥️",
-		title: "IT Asset Management",
-		desc: "Inventarisasi aset IT secara real-time. Pantau hardware, software, dan lisensi perusahaan dari satu dashboard terpusat.",
+		title: "IT Invnentory ",
+		desc: "IT Inventory yang terintegrasi langsung dengan sistem Direktorat Jenderal Bea dan Cukai, memungkinkan pemantauan dokumen export import secara real-time dan meningkatkan akurasi pelaporan kepabeanan perusahaan",
 		n: "03",
 	},
 	{

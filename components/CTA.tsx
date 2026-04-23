@@ -130,10 +130,8 @@ export function Footer() {
 					fontFamily: "var(--font-playfair)",
 					color: "var(--orange-200)",
 				}}>
-				Sistem
-				<em style={{ fontStyle: "italic", color: "var(--orange-400)" }}>
-					Kita
-				</em>
+				Solvexa
+				<em style={{ fontStyle: "italic", color: "var(--orange-400)" }}>ERP</em>
 			</div>
 			<p className="text-[.78rem]" style={{ color: "rgba(255,248,241,.35)" }}>
 				© 2025 Solvexa. Enterprise Digital Solutions Indonesia.

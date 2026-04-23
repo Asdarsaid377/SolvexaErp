@@ -16,6 +16,14 @@ const projects = [
 		chipClass: "chip-hr",
 	},
 	{
+		n: "02",
+		title:
+			"Sistem Recap Case Pekerjaan dan pelaporan realisasi pekerjaan di Kawasan Industri",
+		sub: "Huadi Bantaeng Industry Park — Kawasan Industri Bantaeng, Sulawesi Selatan",
+		chip: "Recap Case",
+		chipClass: "chip-hr",
+	},
+	{
 		n: "03",
 		title: "Sistem Attendance & Payroll Karyawan",
 		sub: "PT Unity Nickel Alloy Indonesia — Industri Nikel & Metalurgi",
@@ -123,9 +131,9 @@ export default function PortfolioSection() {
 				<div
 					className="flex flex-col border rounded-[var(--radius)] overflow-hidden"
 					style={{ borderColor: "var(--border-soft)" }}>
-					{projects.map(({ n, title, sub, chip, chipClass }) => (
+					{projects.map((item, index) => (
 						<div
-							key={n}
+							key={index}
 							className="port-item relative grid items-center gap-7 px-9 py-[26px] border-b last:border-b-0"
 							style={{
 								gridTemplateColumns: "52px 1fr auto",
@@ -139,7 +147,7 @@ export default function PortfolioSection() {
 									fontFamily: "var(--font-playfair)",
 									color: "var(--orange-400)",
 								}}>
-								{n}
+								{index + 1}
 							</div>
 							<div>
 								<h3
@@ -148,18 +156,18 @@ export default function PortfolioSection() {
 										fontFamily: "var(--font-playfair)",
 										color: "var(--text-primary)",
 									}}>
-									{title}
+									{item.title}
 								</h3>
 								<p
 									className="text-[.8rem] font-light"
 									style={{ color: "var(--text-muted)" }}>
-									{sub}
+									{item.sub}
 								</p>
 							</div>
 							<span
 								className="hidden sm:inline-block px-[14px] py-[4px] rounded-full text-[.7rem] font-semibold tracking-[.5px] whitespace-nowrap"
-								style={chipStyles[chipClass]}>
-								{chip}
+								style={chipStyles[item.chipClass]}>
+								{item.chip}
 							</span>
 						</div>
 					))}

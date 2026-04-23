@@ -54,11 +54,11 @@ export default function WhyUsSection() {
 	return (
 		<section
 			id="tentang"
-			className="px-6 md:px-16 py-[80px] md:py-[110px]"
+			className="px-6  md:px-16 py-[80px] md:py-[110px]"
 			style={{ background: "var(--bg-dark)" }}>
 			{/* Glow orb */}
 			<div
-				className="absolute pointer-events-none rounded-full"
+				className="absolute hidden md:block pointer-events-none rounded-full"
 				style={{
 					width: 600,
 					height: 600,
@@ -69,7 +69,7 @@ export default function WhyUsSection() {
 				}}
 			/>
 
-			<div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+			<div className=" grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
 				{/* Left */}
 				<ScrollReveal>
 					<div

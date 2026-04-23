@@ -5,7 +5,7 @@ const Footer = () => {
 		<div>
 			<footer>
 				<div className="foot-logo">
-					Sistem<em>Kita</em>
+					Solvexa<em>Erp</em>
 				</div>
 				<p>© 2025 Solvexa. Enterprise Digital Solutions Indonesia.</p>
 				<div className="foot-links">

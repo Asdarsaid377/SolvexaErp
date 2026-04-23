@@ -60,7 +60,10 @@
 		background: var(--bg-base);
 		color: var(--text-primary);
 		font-family: var(--font-plus-jakarta), sans-serif;
+		/* Gunakan combo ini untuk mengunci scroll samping */
 		overflow-x: hidden;
+		width: 100%;
+		position: relative;
 		line-height: 1.6;
 	}
 
